@@ -1,0 +1,6 @@
+{
+  "name": "AI-Консультант по корпоративной культуре",
+  "description": "Интеллектуальный помощник для сотрудников по вопросам внутренних политик, отпусков, премий и традиций компании на основе базы знаний.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
