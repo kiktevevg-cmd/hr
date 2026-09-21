@@ -244,7 +244,11 @@ ${compiledKBText}
 
 // Mount Vite middleware or static files depending on mode
 async function start() {
-  if (process.env.NODE_ENV !== "production") {
+  const isProduction =
+    process.env.NODE_ENV === "production" ||
+    (typeof __dirname !== "undefined" && __dirname.includes("dist"));
+
+  if (!isProduction) {
     console.log("Starting server in development mode with Vite middleware...");
     const vite = await createViteServer({
       server: { middlewareMode: true },
